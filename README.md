@@ -16,8 +16,7 @@
 
 |Column|Type|Option|
 |------|----|------|
-|groupname|string|null: false|
-|member|string||null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :posts
@@ -41,8 +40,8 @@
 
 |Column|Type|Option|
 |------|----|------|
-|text|text|null: false|
-|image|string|null: false|
+|text|text|
+|image|string|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
