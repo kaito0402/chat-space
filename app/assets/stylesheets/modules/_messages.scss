@@ -39,6 +39,19 @@
     .group{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
+      .contents{
+        padding:0 20px;
+        .GroupName{
+          padding-top: 20px;
+          font-size: 15px;
+          color: white;
+        }
+        .GroupMessage{
+          color: white;
+          font-size: 11px;
+          padding: 5px 0 40px 0;
+        }
+      }
     }
   }
   .MainChat{
