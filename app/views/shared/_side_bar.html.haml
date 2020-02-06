@@ -1,3 +1,11 @@
 .SideBar
   .user
+    .contents
+      .contents__left
+        masa
+      .contents__right
+        = link_to "#", class: "UserIcon UserIcon-left" do
+          = icon("fas", "edit", class: "UserIcon--edit")
+        = link_to "#", class: "UserIcon UserIcon-right" do
+          = icon("fas", "cog", class: "UserIcon--cog")
   .group

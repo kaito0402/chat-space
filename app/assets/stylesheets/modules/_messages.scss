@@ -11,6 +11,30 @@
     .user{
       height: 100px;
       background-color:#253141;
+      display: flex;
+      align-items: center;
+      .contents{
+        height: 20px;
+        background-color: #253141;
+        width: 260px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        &__left{
+          color: white;
+        }
+        &__right{
+          width: 60px;
+          text-align: right;
+          .UserIcon{
+            text-decoration: none;
+            color: white;
+            .UserIcon--cog{
+              padding-left: 5px;
+            }
+          }
+        }
+      }
     }
     .group{
       background-color: #2f3e51;
