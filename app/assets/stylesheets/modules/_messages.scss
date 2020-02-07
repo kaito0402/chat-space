@@ -57,23 +57,101 @@
   .MainChat{
     background-color: #ffffff;
     width: calc(100vw - 300px);
-    .top{
+    .TopBar{
       height: 100px;
       background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__left{
+        padding: 35px 0 0 40px;
+        .GroupName{
+          font-size: 20px;
+          color: #333333;
+          padding-bottom: 15px;
+        }
+        .member{
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      &__right{
+        text-decoration: none;
+        border: ridge thin #38aef0;
+        height: 40px;
+        width: 72px;
+        margin-right: 40px;
+        
+        .edit-btn{
+          text-decoration: none;
+          font-size: 16px;
+          color: #38aef0;
+          padding: 0 20px;
+          line-height: 40px;
+        }
+      }
     }
     .ChatSpace{
       height: calc(100vh - 190px);
       background-color: #fafafa;
       width: calc(100vw - 300px);
+      .contents{
+        padding: 35px 0 46px 40px ;
+        &__top{
+        display: flex;
+        padding-bottom: 12px;
+         .name{
+          color: #333333;
+          font-size: 16px;
+          }
+          .date{
+          color: #999999;
+          font-size: 12px;
+          padding-left: 5px;
+          }
+        }
+        &__bottom{
+          color: #434A54;
+          font-size: 14px;
+        }
+      }
     }
     .MessageForm{
       height: 90px;
       background-color: #d2d2d2;
-      width: calc(100vw - 300px);
+      padding: 20px 40px;
+      
+      form{
+        display: flex;
+        .text-box{
+          width: 100%;
+          display: flex;
+          position: relative;
+          &__text{
+            height: 50px;
+            width: 100%;
+            color: #434a54;
+            border-style: none;
+            padding: 0 40px 0 10px;
+          }
+          &__image{
+            position: absolute;
+            top: 17px;
+            right: 10px;
+            &__file{
+            display: none;
+          }
+        }
+        }
+        .submit-btn{
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+        }
+      }
     }
   }
-
-
-
-
 }
