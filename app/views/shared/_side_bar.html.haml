@@ -2,11 +2,11 @@
   .user
     .contents
       .contents__left
-        masa
+        = current_user.name
       .contents__right
         = link_to "#", class: "UserIcon UserIcon-left" do
           = icon("fas", "edit", class: "UserIcon--edit")
-        = link_to "#", class: "UserIcon UserIcon-right" do
+        = link_to edit_user_path(current_user), class: "UserIcon UserIcon-right" do
           = icon("fas", "cog", class: "UserIcon--cog")
   
   .group
