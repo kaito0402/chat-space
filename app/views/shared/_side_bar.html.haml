@@ -4,18 +4,16 @@
       .contents__left
         = current_user.name
       .contents__right
-        = link_to "#", class: "UserIcon UserIcon-left" do
+        = link_to new_group_path, class: "UserIcon UserIcon-left" do
           = icon("fas", "edit", class: "UserIcon--edit")
         = link_to edit_user_path(current_user), class: "UserIcon UserIcon-right" do
           = icon("fas", "cog", class: "UserIcon--cog")
   
   .group
-    .contents
-      .GroupName
-        techchamp
-      .GroupMessage
-        まだメッセージはありません
-      .GroupName
-        techchamp
-      .GroupMessage
-        まだメッセージはありません
+    - current_user.groups.each do |group|
+      .contents
+        = link_to '#' do
+          .GroupName
+            = group.name
+          .GroupMessage
+            メッセージはまだありません。
