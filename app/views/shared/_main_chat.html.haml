@@ -2,36 +2,22 @@
   .TopBar
     .TopBar__left
       .GroupName
-        test
+        = @group.name
       .member
-        Member : masa
+        - @group.users.each do |member|
+          = member.name
+          
+          
     .TopBar__right
-      = link_to "#", class: "edit-btn" do
+      = link_to edit_group_path(@group), class: "edit-btn" do
         Edit
   .ChatSpace
-    .contents
-      .contents__top
-        .name
-          masa
-        .date
-          2019/11/20(Wed) 17:43:01
-      .contents__bottom
-        おはよう！
-    .contents
-      .contents__top
-        .name
-          masa
-        .date
-          2019/11/20(Wed) 17:43:01
-      .contents__bottom
-        おはよう！
+    = render @messages
   .MessageForm
-    %form.new_message
+    = form_for [@group, @message] do |f|
       .text-box
-        %input{type: ".text", class: "text-box__text", placeholder: "type a message"}
-        %label{class: "text-box__image"}
+        = f.text_field :content, class: "text-box__text", placeholder: "type a message"
+        = f.label :image, class: "text-box__image" do
           = icon('fas', 'image')
-          %input{type: "file", class: "text-box__image__file"}
-      %input{type: "submit", value: "Send", class: "submit-btn"}
-        
-    
+          = f.file_field :image, class: "text-box__image__file"
+      = f.submit "Send", class: "submit-btn"
