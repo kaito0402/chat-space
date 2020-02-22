@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @group = Group.new(group_params)
+    @group = Group.new
   end
   def new
     @group = Group.new
