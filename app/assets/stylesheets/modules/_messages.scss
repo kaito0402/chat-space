@@ -101,11 +101,11 @@
         &__top{
         display: flex;
         padding-bottom: 12px;
-         .name{
+         &__name{
           color: #333333;
           font-size: 16px;
           }
-          .date{
+          &__date{
           color: #999999;
           font-size: 12px;
           padding-left: 5px;
